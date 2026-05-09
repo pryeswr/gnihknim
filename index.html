@@ -1,409 +1,365 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="th">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6d6d6d; -webkit-text-stroke: #6d6d6d}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6b0001; -webkit-text-stroke: #6b0001}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #fb0007; -webkit-text-stroke: #fb0007}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #0000ff; -webkit-text-stroke: #0000ff}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #626262; -webkit-text-stroke: #626262}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #4d5055; -webkit-text-stroke: #4d5055}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #626262; -webkit-text-stroke: #fb0007}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #626262; -webkit-text-stroke: #6b0001}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #626262; -webkit-text-stroke: #626262; min-height: 16.0px}
-    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #18702b; -webkit-text-stroke: #18702b}
-    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #626262; -webkit-text-stroke: #18702b}
-    span.s1 {font-kerning: none; background-color: #ecf1f7}
-    span.s2 {font-kerning: none; color: #fb0007; background-color: #ecf1f7; -webkit-text-stroke: 0px #fb0007}
-    span.s3 {font-kerning: none; color: #2a2a2a; background-color: #ecf1f7; -webkit-text-stroke: 0px #2a2a2a}
-    span.s4 {font-kerning: none; color: #626262; background-color: #ecf1f7; -webkit-text-stroke: 0px #626262}
-    span.s5 {font-kerning: none; color: #0000ff; background-color: #ecf1f7; -webkit-text-stroke: 0px #0000ff}
-    span.s6 {font-kerning: none; color: #6b0001; background-color: #ecf1f7; -webkit-text-stroke: 0px #6b0001}
-    span.s7 {font-kerning: none; background-color: #ecf1f7; -webkit-text-stroke: 0px #000000}
-    span.s8 {font-kerning: none; color: #093c94; background-color: #ecf1f7; -webkit-text-stroke: 0px #093c94}
-    span.s9 {font-kerning: none; color: #626262; background-color: #ecf1f7; -webkit-text-stroke: 0px #000000}
-    span.s10 {font-kerning: none; color: #18702b; background-color: #ecf1f7; -webkit-text-stroke: 0px #18702b}
-    span.s11 {font-kerning: none; color: #137646; background-color: #ecf1f7; -webkit-text-stroke: 0px #137646}
-    span.s12 {font-kerning: none; color: #6f0ec3; background-color: #ecf1f7; -webkit-text-stroke: 0px #6f0ec3}
-    span.s13 {font-kerning: none; background-color: #ecf1f7; -webkit-text-stroke: 0px #626262}
-    span.s14 {font-kerning: none; color: #fb0007; background-color: #ecf1f7}
-    span.s15 {font-kerning: none; color: #6b0001; background-color: #ecf1f7}
-    span.s16 {font-kerning: none}
-    span.s17 {font-kerning: none; color: #a4450b; background-color: #ecf1f7; -webkit-text-stroke: 0px #a4450b}
-    span.s18 {font-kerning: none; color: #0e6e6d; background-color: #ecf1f7; -webkit-text-stroke: 0px #0e6e6d}
-    span.s19 {font-kerning: none; color: #18702b; background-color: #ecf1f7}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Commission Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --merlot: #B1D5E3; /* สีหลัก (ฟ้า) */
+            --butter: #7BAABD; /* สีรอง (น้ำเงินอมเทา) */
+            --dark-text: #2D3748;
+        }
+        body { 
+            font-family: 'Prompt', sans-serif; 
+            background-color: #f9fafb; 
+            color: #1f2937;
+            font-weight: 300;
+        }
+        .card-shadow { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); }
+        .active-card { border: 2px solid var(--merlot) !important; background-color: white !important; }
+        .dashed-line { border-top: 1px dashed #e5e7eb; margin: 1.5rem 0; }
+        .transition-all { transition: all 0.2s ease-in-out; }
+        
+        .merlot-text { color: #7BAABD; } 
+        .merlot-bg { background-color: var(--merlot); }
+        .butter-bg { background-color: var(--butter); }
+        
+        .check-circle {
+            background-color: var(--merlot);
+            color: var(--butter);
+        }
+
+        /* ปรับขนาดตัวหนังสือซับไตเติลตามบรีฟ */
+        .sub-text {
+            font-size: 13px; /* ใหญ่ขึ้นจาก 12px */
+            color: #9ca3af;
+        }
+    </style>
 </head>
-<body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE</span><span class="s2"> html</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s1">html</span><span class="s4"> </span><span class="s2">lang</span><span class="s3">=</span><span class="s5">"th"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s1">charset</span><span class="s3">=</span><span class="s5">"UTF-8"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">name</span><span class="s3">=</span><span class="s1">"viewport"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"width=device-width, initial-scale=1.0"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">title</span><span class="s3">&gt;</span><span class="s1">Art Commission Calculator</span><span class="s3">&lt;/</span><span class="s6">title</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdn.tailwindcss.com"</span><span class="s3">&gt;&lt;/</span><span class="s6">script</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">link</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600&amp;display=swap"</span><span class="s4"> </span><span class="s2">rel</span><span class="s3">=</span><span class="s1">"stylesheet"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">link</span><span class="s4"> </span><span class="s2">rel</span><span class="s3">=</span><span class="s1">"stylesheet"</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">:root</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">--merlot:</span><span class="s4"> </span><span class="s8">#B1D5E3</span><span class="s9">;</span><span class="s4"> </span><span class="s1">/* สีหลัก (ฟ้า) */</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">--butter:</span><span class="s4"> </span><span class="s8">#7BAABD</span><span class="s9">;</span><span class="s4"> </span><span class="s1">/* สีรอง (น้ำเงินอมเทา) */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">--dark-text:</span><span class="s1"> </span><span class="s8">#2D3748</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">body</span><span class="s1"> </span><span class="s7">{</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-family:</span><span class="s1"> </span><span class="s10">'Prompt'</span><span class="s7">,</span><span class="s1"> </span><span class="s8">sans-serif</span><span class="s7">;</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">background-color:</span><span class="s4"> </span><span class="s8">#f9fafb</span><span class="s9">;</span><span class="s4"><span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color:</span><span class="s1"> </span><span class="s8">#1f2937</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-weight:</span><span class="s1"> </span><span class="s11">300</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">.card-shadow</span><span class="s1"> </span><span class="s7">{</span><span class="s1"> </span><span class="s2">box-shadow:</span><span class="s1"> </span><span class="s11">0</span><span class="s1"> </span><span class="s11">4px</span><span class="s1"> </span><span class="s11">20px</span><span class="s1"> </span><span class="s8">rgba(</span><span class="s11">0</span><span class="s7">,</span><span class="s1"> </span><span class="s11">0</span><span class="s7">,</span><span class="s1"> </span><span class="s11">0</span><span class="s7">,</span><span class="s1"> </span><span class="s11">0.03</span><span class="s8">)</span><span class="s7">;</span><span class="s1"> </span><span class="s7">}</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s6">.active-card</span><span class="s4"> </span><span class="s9">{</span><span class="s4"> </span><span class="s1">border:</span><span class="s4"> </span><span class="s11">2px</span><span class="s4"> </span><span class="s8">solid</span><span class="s4"> </span><span class="s8">var(--merlot)</span><span class="s4"> </span><span class="s12">!important</span><span class="s9">;</span><span class="s4"> </span><span class="s1">background-color:</span><span class="s4"> </span><span class="s8">white</span><span class="s4"> </span><span class="s12">!important</span><span class="s9">;</span><span class="s4"> </span><span class="s9">}</span></p>
-<p class="p7"><span class="s13"><span class="Apple-converted-space">        </span></span><span class="s6">.dashed-line</span><span class="s13"> </span><span class="s7">{</span><span class="s13"> </span><span class="s14">border-top:</span><span class="s13"> </span><span class="s11">1px</span><span class="s13"> </span><span class="s8">dashed</span><span class="s13"> </span><span class="s8">#e5e7eb</span><span class="s7">;</span><span class="s13"> </span><span class="s14">margin:</span><span class="s13"> </span><span class="s11">1.5rem</span><span class="s13"> </span><span class="s11">0</span><span class="s7">;</span><span class="s13"> </span><span class="s7">}</span></p>
-<p class="p8"><span class="s13"><span class="Apple-converted-space">        </span></span><span class="s15">.transition-all</span><span class="s13"> </span><span class="s7">{</span><span class="s13"> </span><span class="s2">transition:</span><span class="s13"> </span><span class="s8">all</span><span class="s13"> </span><span class="s11">0.2s</span><span class="s13"> </span><span class="s8">ease-in-out</span><span class="s7">;</span><span class="s13"> </span><span class="s7">}</span></p>
-<p class="p9"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">.merlot-text</span><span class="s1"> </span><span class="s7">{</span><span class="s1"> </span><span class="s2">color:</span><span class="s1"> </span><span class="s8">#7BAABD</span><span class="s7">;</span><span class="s1"> </span><span class="s7">}</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s6">.merlot-bg</span><span class="s4"> </span><span class="s9">{</span><span class="s4"> </span><span class="s1">background-color:</span><span class="s4"> </span><span class="s8">var(--merlot)</span><span class="s9">;</span><span class="s4"> </span><span class="s9">}</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s6">.butter-bg</span><span class="s4"> </span><span class="s9">{</span><span class="s4"> </span><span class="s1">background-color:</span><span class="s4"> </span><span class="s8">var(--butter)</span><span class="s9">;</span><span class="s4"> </span><span class="s9">}</span></p>
-<p class="p9"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.check-circle</span><span class="s4"> </span><span class="s9">{</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">background-color:</span><span class="s4"> </span><span class="s8">var(--merlot)</span><span class="s9">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color:</span><span class="s1"> </span><span class="s8">var(--butter)</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">/* ปรับขนาดตัวหนังสือซับไตเติลตามบรีฟ */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">.sub-text</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">font-size:</span><span class="s4"> </span><span class="s11">13px</span><span class="s9">;</span><span class="s4"> </span><span class="s1">/* ใหญ่ขึ้นจาก 12px */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color:</span><span class="s1"> </span><span class="s8">#9ca3af</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s3">&lt;</span><span class="s6">body</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"pb-20"</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">nav</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white border-b border-gray-100 sticky top-0 z-50"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"max-w-6xl mx-auto px-6 h-20 flex items-center justify-between"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">h1</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-2xl font-medium tracking-tight"</span><span class="s3">&gt;</span><span class="s1">Commission Calculator</span><span class="s3">&lt;/</span><span class="s6">h1</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-[12px] text-gray-400 uppercase tracking-widest mt-1"</span><span class="s3">&gt;</span><span class="s4">Update: 26/04/2025</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hidden md:block"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xs text-gray-400"</span><span class="s3">&gt;</span><span class="s1">สำหรับคำนวณราคาคอมมิชชั่นเบื้องต้น</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s6">nav</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">main</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"max-w-6xl mx-auto px-6 mt-10"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid grid-cols-1 lg:grid-cols-12 gap-10"</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"lg:col-span-7 space-y-10"</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- ประเภทงาน --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-8 rounded-[2rem] card-shadow border border-gray-50"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center justify-between mb-8"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-lg font-medium"</span><span class="s3">&gt;</span><span class="s1">ประเภทงาน:</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex p-1 bg-gray-100 rounded-full text-xs"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"setStyle('colored')"</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"btn-colored"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-5 py-2 rounded-full transition-all bg-white shadow-sm font-medium"</span><span class="s4"> </span><span class="s2">style</span><span class="s3">=</span><span class="s1">"color: #7BAABD;"</span><span class="s3">&gt;</span><span class="s4">งานลงสี</span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"setStyle('lineart')"</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"btn-lineart"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-5 py-2 rounded-full transition-all text-gray-500"</span><span class="s3">&gt;</span><span class="s4">เฉพาะตัดเส้น</span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid grid-cols-1 md:grid-cols-3 gap-4"</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"base-cards"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"card-headshot"</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"selectType('headshot')"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"cursor-pointer p-6 rounded-3xl border-2 border-gray-100 bg-gray-50 hover:border-gray-200 transition-all active-card"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-medium"</span><span class="s3">&gt;</span><span class="s1">Bust-Up</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"sub-text mb-4"</span><span class="s3">&gt;</span><span class="s1">หัว - อก</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-medium"</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"price-headshot"</span><span class="s3">&gt;</span><span class="s4">300.-</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"card-halfbody"</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"selectType('halfbody')"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"cursor-pointer p-6 rounded-3xl border-2 border-gray-100 bg-gray-50 hover:border-gray-200 transition-all"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-medium"</span><span class="s3">&gt;</span><span class="s1">Half Body</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"sub-text mb-4"</span><span class="s3">&gt;</span><span class="s1">ครึ่งตัว</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-medium"</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"price-halfbody"</span><span class="s3">&gt;</span><span class="s4">400.-</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"card-fullbody"</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"selectType('fullbody')"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"cursor-pointer p-6 rounded-3xl border-2 border-gray-100 bg-gray-50 hover:border-gray-200 transition-all"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-medium"</span><span class="s3">&gt;</span><span class="s1">Full Body</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"sub-text mb-4"</span><span class="s3">&gt;</span><span class="s1">เต็มตัว</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-medium"</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"price-fullbody"</span><span class="s3">&gt;</span><span class="s4">500.-</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">section</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- ออฟฟิศชั่นเสริม --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-8 rounded-[2rem] card-shadow border border-gray-50"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-lg font-medium mb-6"</span><span class="s3">&gt;</span><span class="s1">ออฟฟิศชั่นเสริม:</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"space-y-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center justify-between p-5 bg-gray-50 rounded-3xl border border-gray-100"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-medium"</span><span class="s3">&gt;</span><span class="s1">เพิ่มตัวละคร</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"sub-text"</span><span class="s1"> </span><span class="s2">id</span><span class="s3">=</span><span class="s5">"add-char-rate"</span><span class="s3">&gt;</span><span class="s1">ราคาต่อตัว: 200.-</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"flex items-center gap-5"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"changeChar(-1)"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-gray-100"</span><span class="s3">&gt;</span><span class="s4">-</span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"char-count"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"font-medium w-4 text-center"</span><span class="s3">&gt;</span><span class="s4">0</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"changeChar(1)"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-gray-100"</span><span class="s3">&gt;</span><span class="s4">+</span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">label</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center justify-between p-5 bg-gray-50 rounded-3xl border border-gray-100 cursor-pointer hover:bg-white transition-all"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"flex items-center gap-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">input</span><span class="s4"> </span><span class="s2">type</span><span class="s3">=</span><span class="s1">"checkbox"</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"opt-bg"</span><span class="s4"> </span><span class="s2">onchange</span><span class="s3">=</span><span class="s1">"calculate()"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-5 h-5 rounded accent-[#B1D5E3]"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-medium"</span><span class="s3">&gt;</span><span class="s1">เพิ่มฉากหลัง (Add BG)</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"sub-text"</span><span class="s3">&gt;</span><span class="s1">ราคาจริงประเมินตามบรีฟ</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xs font-medium"</span><span class="s3">&gt;</span><span class="s1">เริ่มต้น 200.-</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">label</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">label</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center justify-between p-5 bg-gray-50 rounded-3xl border border-gray-100 cursor-pointer hover:bg-white transition-all"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"flex items-center gap-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">input</span><span class="s4"> </span><span class="s2">type</span><span class="s3">=</span><span class="s1">"checkbox"</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"opt-comm"</span><span class="s4"> </span><span class="s2">onchange</span><span class="s3">=</span><span class="s1">"calculate()"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-5 h-5 rounded accent-[#B1D5E3]"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-medium"</span><span class="s3">&gt;</span><span class="s1">เชิงพาณิชย์ (Commercial)</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"sub-text"</span><span class="s3">&gt;</span><span class="s1">เรทราคา x2 ของยอดรวมทั้งหมด</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs font-medium opacity-70"</span><span class="s3">&gt;</span><span class="s4">x2</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">label</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">section</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid grid-cols-1 md:grid-cols-2 gap-6 text-[14px] leading-relaxed"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s1">&lt;!-- ข้อตกลงในการจ้าง --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-8 rounded-[2rem] card-shadow border border-gray-50"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"font-medium text-lg mb-4"</span><span class="s3">&gt;</span><span class="s1">ข้อตกลงในการจ้าง:</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">ul</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"space-y-4 text-gray-500"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"flex gap-3 items-start"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 check-circle"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fa-solid fa-check text-[10px]"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s3">&gt;</span><span class="s1">งานไม่เร่ง (จ.-ศ. ทำงานประจำ)</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"flex gap-3 items-start"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 check-circle"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fa-solid fa-check text-[10px]"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s3">&gt;</span><span class="s1">แก้ฟรี 3 ครั้ง (เกินคิดครั้งละ 50.-)</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"flex gap-3 items-start"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 check-circle"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fa-solid fa-check text-[10px]"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s3">&gt;</span><span class="s1">มัดจำ 50% ก่อนเริ่มงาน</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex gap-3 items-start text-red-800"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 check-circle"</span><span class="s4"> </span><span class="s2">style</span><span class="s3">=</span><span class="s1">"background-color: #fee2e2; color: #ef4444;"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                                    </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"fa-solid fa-triangle-exclamation text-[10px]"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s3">&gt;</span><span class="s1">ยกเลิกกลางคัน จ่าย 50% ของราคาเต็ม</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">ul</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s1">&lt;!-- ขั้นตอนการทำงาน --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-8 rounded-[2rem] card-shadow border border-gray-50"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"font-medium text-lg mb-4"</span><span class="s3">&gt;</span><span class="s1">ขั้นตอนการทำงาน:</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">ol</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"space-y-4 text-gray-500"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"flex gap-3 items-start"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"font-medium text-[#7BAABD]"</span><span class="s3">&gt;</span><span class="s1">1)</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s3">&gt;</span><span class="s1">พูดคุยรับบรีฟ และจ่ายมัดจำครึ่งราคา</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"flex gap-3 items-start"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"font-medium text-[#7BAABD]"</span><span class="s3">&gt;</span><span class="s1">2)</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s3">&gt;</span><span class="s1">ส่งสเก็ตช์ (ปรับแก้ได้ก่อนลงสี)</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"flex gap-3 items-start"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"font-medium text-[#7BAABD]"</span><span class="s3">&gt;</span><span class="s1">3)</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s3">&gt;</span><span class="s1">ตัดเส้นลงสี และส่งอัปเดตเรื่อยๆ</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"flex gap-3 items-start"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"font-medium text-[#7BAABD]"</span><span class="s3">&gt;</span><span class="s1">4)</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s3">&gt;</span><span class="s1">ส่งงานไฟล์จริง และจ่ายส่วนที่เหลือ</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">ol</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">section</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- สรุปรายการ --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"lg:col-span-5"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"sticky top-28 bg-white p-8 md:p-10 rounded-[2.5rem] card-shadow border border-gray-100"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-medium mb-10"</span><span class="s3">&gt;</span><span class="s1">สรุปรายการ</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"summary-list"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"space-y-4 text-[13px]"</span><span class="s3">&gt;&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"dashed-line"</span><span class="s3">&gt;&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex justify-between items-baseline mt-4 mb-8"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-[13px] text-gray-400 font-normal"</span><span class="s3">&gt;</span><span class="s4">ราคาสุทธิ</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-right"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"total-price"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-5xl font-medium tracking-tighter"</span><span class="s4"> </span><span class="s2">style</span><span class="s3">=</span><span class="s1">"color: #7BAABD;"</span><span class="s3">&gt;</span><span class="s4">300</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-[12px] font-bold text-gray-300 ml-1"</span><span class="s3">&gt;</span><span class="s4">THB</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mt-8 p-5 rounded-2xl flex justify-between items-center"</span><span class="s4"> </span><span class="s2">style</span><span class="s3">=</span><span class="s1">"background-color: #f3f9fb;"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xs font-medium"</span><span class="s1"> </span><span class="s2">style</span><span class="s3">=</span><span class="s5">"color: #7BAABD;"</span><span class="s3">&gt;</span><span class="s1">ยอดมัดจำ (50%)</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"deposit-price"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-lg font-medium"</span><span class="s4"> </span><span class="s2">style</span><span class="s3">=</span><span class="s1">"color: #7BAABD;"</span><span class="s3">&gt;</span><span class="s4">150.-</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"copyDetail()"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full mt-10 merlot-bg text-gray-700 py-5 rounded-2xl font-medium hover:opacity-90 active:scale-[0.98] transition-all flex items-center justify-center gap-3"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fa-regular fa-copy text-sm"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span><span class="s1"> คัดลอกรายละเอียด</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"toast"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center mt-4 text-[12px] text-green-600 opacity-0 transition-opacity"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>คัดลอกข้อมูลเรียบร้อยแล้ว! ✨</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s6">main</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s12">const</span><span class="s1"> rates </span><span class="s7">=</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>colored</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>headshot</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span><span class="s1"> base</span><span class="s7">:</span><span class="s1"> </span><span class="s17">300</span><span class="s7">,</span><span class="s1"> add</span><span class="s7">:</span><span class="s1"> </span><span class="s17">200</span><span class="s7">,</span><span class="s1"> label</span><span class="s7">:</span><span class="s1"> </span><span class="s10">'Bust-Up (หัว-อก)'</span><span class="s1"> </span><span class="s7">},</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>halfbody</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span><span class="s1"> base</span><span class="s7">:</span><span class="s1"> </span><span class="s17">400</span><span class="s7">,</span><span class="s1"> add</span><span class="s7">:</span><span class="s1"> </span><span class="s17">300</span><span class="s7">,</span><span class="s1"> label</span><span class="s7">:</span><span class="s1"> </span><span class="s10">'Half Body (ครึ่งตัว)'</span><span class="s1"> </span><span class="s7">},</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>fullbody</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span><span class="s1"> base</span><span class="s7">:</span><span class="s1"> </span><span class="s17">500</span><span class="s7">,</span><span class="s1"> add</span><span class="s7">:</span><span class="s1"> </span><span class="s17">400</span><span class="s7">,</span><span class="s1"> label</span><span class="s7">:</span><span class="s1"> </span><span class="s10">'Full Body (เต็มตัว)'</span><span class="s1"> </span><span class="s7">}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">},</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>lineart</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>headshot</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span><span class="s1"> base</span><span class="s7">:</span><span class="s1"> </span><span class="s17">150</span><span class="s7">,</span><span class="s1"> add</span><span class="s7">:</span><span class="s1"> </span><span class="s17">100</span><span class="s7">,</span><span class="s1"> label</span><span class="s7">:</span><span class="s1"> </span><span class="s10">'Bust-Up (หัว-อก)'</span><span class="s1"> </span><span class="s7">},</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>halfbody</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span><span class="s1"> base</span><span class="s7">:</span><span class="s1"> </span><span class="s17">200</span><span class="s7">,</span><span class="s1"> add</span><span class="s7">:</span><span class="s1"> </span><span class="s17">150</span><span class="s7">,</span><span class="s1"> label</span><span class="s7">:</span><span class="s1"> </span><span class="s10">'Half Body (ครึ่งตัว)'</span><span class="s1"> </span><span class="s7">},</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>fullbody</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span><span class="s1"> base</span><span class="s7">:</span><span class="s1"> </span><span class="s17">300</span><span class="s7">,</span><span class="s1"> add</span><span class="s7">:</span><span class="s1"> </span><span class="s17">200</span><span class="s7">,</span><span class="s1"> label</span><span class="s7">:</span><span class="s1"> </span><span class="s10">'Full Body (เต็มตัว)'</span><span class="s1"> </span><span class="s7">}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">};</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s12">let</span><span class="s1"> currentStyle </span><span class="s7">=</span><span class="s1"> </span><span class="s10">'colored'</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s12">let</span><span class="s1"> currentType </span><span class="s7">=</span><span class="s1"> </span><span class="s10">'headshot'</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s12">let</span><span class="s1"> extraChar </span><span class="s7">=</span><span class="s1"> </span><span class="s17">0</span><span class="s7">;</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s12">function</span><span class="s1"> setStyle</span><span class="s7">(</span><span class="s1">style</span><span class="s7">)</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>currentStyle </span><span class="s7">=</span><span class="s1"> style</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> btnColored </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s10">'btn-colored'</span><span class="s7">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> btnLineart </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s10">'btn-lineart'</span><span class="s7">);</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">if</span><span class="s7">(</span><span class="s1">style </span><span class="s7">===</span><span class="s1"> </span><span class="s10">'colored'</span><span class="s7">)</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">                </span>btnColored</span><span class="s9">.</span><span class="s4">className </span><span class="s9">=</span><span class="s4"> </span><span class="s1">"px-5 py-2 rounded-full transition-all bg-white shadow-sm font-medium"</span><span class="s9">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>btnColored</span><span class="s7">.</span><span class="s1">style</span><span class="s7">.</span><span class="s1">color </span><span class="s7">=</span><span class="s1"> </span><span class="s10">"#7BAABD"</span><span class="s7">;</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">                </span>btnLineart</span><span class="s9">.</span><span class="s4">className </span><span class="s9">=</span><span class="s4"> </span><span class="s1">"px-5 py-2 rounded-full transition-all text-gray-500"</span><span class="s9">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>btnLineart</span><span class="s7">.</span><span class="s1">style</span><span class="s7">.</span><span class="s1">color </span><span class="s7">=</span><span class="s1"> </span><span class="s10">""</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">}</span><span class="s1"> </span><span class="s12">else</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">                </span>btnLineart</span><span class="s9">.</span><span class="s4">className </span><span class="s9">=</span><span class="s4"> </span><span class="s1">"px-5 py-2 rounded-full transition-all bg-white shadow-sm font-medium"</span><span class="s9">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>btnLineart</span><span class="s7">.</span><span class="s1">style</span><span class="s7">.</span><span class="s1">color </span><span class="s7">=</span><span class="s1"> </span><span class="s10">"#7BAABD"</span><span class="s7">;</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">                </span>btnColored</span><span class="s9">.</span><span class="s4">className </span><span class="s9">=</span><span class="s4"> </span><span class="s1">"px-5 py-2 rounded-full transition-all text-gray-500"</span><span class="s9">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>btnColored</span><span class="s7">.</span><span class="s1">style</span><span class="s7">.</span><span class="s1">color </span><span class="s7">=</span><span class="s1"> </span><span class="s10">""</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>updateUI</span><span class="s7">();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>calculate</span><span class="s7">();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s12">function</span><span class="s1"> selectType</span><span class="s7">(</span><span class="s1">type</span><span class="s7">)</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>currentType </span><span class="s7">=</span><span class="s1"> type</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>document</span><span class="s7">.</span><span class="s1">querySelectorAll</span><span class="s7">(</span><span class="s10">'#base-cards &gt; div'</span><span class="s7">).</span><span class="s1">forEach</span><span class="s7">(</span><span class="s1">c </span><span class="s7">=&gt;</span><span class="s1"> c</span><span class="s7">.</span><span class="s1">classList</span><span class="s7">.</span><span class="s1">remove</span><span class="s7">(</span><span class="s10">'active-card'</span><span class="s7">));</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s10">`card-</span><span class="s7">${</span><span class="s1">type</span><span class="s7">}</span><span class="s10">`</span><span class="s7">).</span><span class="s1">classList</span><span class="s7">.</span><span class="s1">add</span><span class="s7">(</span><span class="s10">'active-card'</span><span class="s7">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>updateUI</span><span class="s7">();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>calculate</span><span class="s7">();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s12">function</span><span class="s1"> updateUI</span><span class="s7">()</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> r </span><span class="s7">=</span><span class="s1"> rates</span><span class="s7">[</span><span class="s1">currentStyle</span><span class="s7">];</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s10">'price-headshot'</span><span class="s7">).</span><span class="s1">innerText </span><span class="s7">=</span><span class="s1"> r</span><span class="s7">.</span><span class="s1">headshot</span><span class="s7">.</span><span class="s1">base </span><span class="s7">+</span><span class="s1"> </span><span class="s10">".-"</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s10">'price-halfbody'</span><span class="s7">).</span><span class="s1">innerText </span><span class="s7">=</span><span class="s1"> r</span><span class="s7">.</span><span class="s1">halfbody</span><span class="s7">.</span><span class="s1">base </span><span class="s7">+</span><span class="s1"> </span><span class="s10">".-"</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s10">'price-fullbody'</span><span class="s7">).</span><span class="s1">innerText </span><span class="s7">=</span><span class="s1"> r</span><span class="s7">.</span><span class="s1">fullbody</span><span class="s7">.</span><span class="s1">base </span><span class="s7">+</span><span class="s1"> </span><span class="s10">".-"</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s10">'add-char-rate'</span><span class="s7">).</span><span class="s1">innerText </span><span class="s7">=</span><span class="s1"> </span><span class="s10">`ราคาต่อตัว: </span><span class="s7">${</span><span class="s1">r</span><span class="s7">[</span><span class="s1">currentType</span><span class="s7">].</span><span class="s1">add</span><span class="s7">}</span><span class="s10">.-`</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s12">function</span><span class="s1"> changeChar</span><span class="s7">(</span><span class="s1">val</span><span class="s7">)</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>extraChar </span><span class="s7">=</span><span class="s1"> </span><span class="s18">Math</span><span class="s7">.</span><span class="s1">max</span><span class="s7">(</span><span class="s17">0</span><span class="s7">,</span><span class="s1"> extraChar </span><span class="s7">+</span><span class="s1"> val</span><span class="s7">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s10">'char-count'</span><span class="s7">).</span><span class="s1">innerText </span><span class="s7">=</span><span class="s1"> extraChar</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>calculate</span><span class="s7">();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s12">function</span><span class="s1"> calculate</span><span class="s7">()</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> r </span><span class="s7">=</span><span class="s1"> rates</span><span class="s7">[</span><span class="s1">currentStyle</span><span class="s7">][</span><span class="s1">currentType</span><span class="s7">];</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">let</span><span class="s1"> base </span><span class="s7">=</span><span class="s1"> r</span><span class="s7">.</span><span class="s1">base</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">let</span><span class="s1"> charPrice </span><span class="s7">=</span><span class="s1"> extraChar </span><span class="s7">*</span><span class="s1"> r</span><span class="s7">.</span><span class="s1">add</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">let</span><span class="s1"> bgPrice </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s10">'opt-bg'</span><span class="s7">).</span><span class="s1">checked </span><span class="s7">?</span><span class="s1"> </span><span class="s17">200</span><span class="s1"> </span><span class="s7">:</span><span class="s1"> </span><span class="s17">0</span><span class="s7">;</span></p>
-<p class="p9"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">let</span><span class="s1"> total </span><span class="s7">=</span><span class="s1"> base </span><span class="s7">+</span><span class="s1"> charPrice </span><span class="s7">+</span><span class="s1"> bgPrice</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">let</span><span class="s1"> commercialAdd </span><span class="s7">=</span><span class="s1"> </span><span class="s17">0</span><span class="s7">;</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">let</span><span class="s1"> html </span><span class="s7">=</span><span class="s1"> </span><span class="s10">`</span></p>
-<p class="p10"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="flex justify-between"&gt;</span></p>
-<p class="p10"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;span&gt;</span><span class="s9">${</span><span class="s4">currentStyle </span><span class="s9">===</span><span class="s4"> </span><span class="s1">'colored'</span><span class="s4"> </span><span class="s9">?</span><span class="s4"> </span><span class="s1">'งานลงสี'</span><span class="s4"> </span><span class="s9">:</span><span class="s4"> </span><span class="s1">'งานตัดเส้น'</span><span class="s9">}</span><span class="s1">: </span><span class="s9">${</span><span class="s4">r</span><span class="s9">.</span><span class="s4">label</span><span class="s9">}</span><span class="s1">&lt;/span&gt;</span></p>
-<p class="p10"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;span class="font-medium"&gt;</span><span class="s9">${</span><span class="s4">base</span><span class="s9">.</span><span class="s4">toLocaleString</span><span class="s9">()}</span><span class="s1">.-&lt;/span&gt;</span></p>
-<p class="p10"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p10"><span class="s1"><span class="Apple-converted-space">            </span>`</span><span class="s9">;</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">if</span><span class="s7">(</span><span class="s1">extraChar </span><span class="s7">&gt;</span><span class="s1"> </span><span class="s17">0</span><span class="s7">)</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>html </span><span class="s7">+=</span><span class="s1"> </span><span class="s10">`</span></p>
-<p class="p10"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between text-gray-400"&gt;</span></p>
-<p class="p10"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;span&gt;เพิ่มตัวละคร (</span><span class="s9">${</span><span class="s4">extraChar</span><span class="s9">}</span><span class="s1"> ตัว)&lt;/span&gt;</span></p>
-<p class="p10"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;span&gt;+</span><span class="s9">${</span><span class="s4">charPrice</span><span class="s9">.</span><span class="s4">toLocaleString</span><span class="s9">()}</span><span class="s1">.-&lt;/span&gt;</span></p>
-<p class="p10"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p10"><span class="s1"><span class="Apple-converted-space">                </span>`</span><span class="s9">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">}</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">if</span><span class="s7">(</span><span class="s1">bgPrice </span><span class="s7">&gt;</span><span class="s1"> </span><span class="s17">0</span><span class="s7">)</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>html </span><span class="s7">+=</span><span class="s1"> </span><span class="s10">`</span></p>
-<p class="p10"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between text-gray-400"&gt;</span></p>
-<p class="p10"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;span&gt;เพิ่มฉากหลัง (เริ่มต้น)&lt;/span&gt;</span></p>
-<p class="p10"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;span&gt;+</span><span class="s9">${</span><span class="s4">bgPrice</span><span class="s9">.</span><span class="s4">toLocaleString</span><span class="s9">()}</span><span class="s1">.-&lt;/span&gt;</span></p>
-<p class="p10"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p10"><span class="s1"><span class="Apple-converted-space">                </span>`</span><span class="s9">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">}</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">if</span><span class="s7">(</span><span class="s1">document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s10">'opt-comm'</span><span class="s7">).</span><span class="s1">checked</span><span class="s7">)</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>commercialAdd </span><span class="s7">=</span><span class="s1"> total</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>total </span><span class="s7">*=</span><span class="s1"> </span><span class="s17">2</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>html </span><span class="s7">+=</span><span class="s1"> </span><span class="s10">`</span></p>
-<p class="p10"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between font-medium pt-2" style="color: #7BAABD;"&gt;</span></p>
-<p class="p10"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;span&gt;เรทเชิงพาณิชย์ (x2)&lt;/span&gt;</span></p>
-<p class="p10"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;span&gt;+</span><span class="s9">${</span><span class="s4">commercialAdd</span><span class="s9">.</span><span class="s4">toLocaleString</span><span class="s9">()}</span><span class="s1">.-&lt;/span&gt;</span></p>
-<p class="p10"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p10"><span class="s1"><span class="Apple-converted-space">                </span>`</span><span class="s9">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">}</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s10">'summary-list'</span><span class="s7">).</span><span class="s1">innerHTML </span><span class="s7">=</span><span class="s1"> html</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s10">'total-price'</span><span class="s7">).</span><span class="s1">innerText </span><span class="s7">=</span><span class="s1"> total</span><span class="s7">.</span><span class="s1">toLocaleString</span><span class="s7">();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s10">'deposit-price'</span><span class="s7">).</span><span class="s1">innerText </span><span class="s7">=</span><span class="s1"> </span><span class="s7">(</span><span class="s1">total </span><span class="s7">/</span><span class="s1"> </span><span class="s17">2</span><span class="s7">).</span><span class="s1">toLocaleString</span><span class="s7">()</span><span class="s1"> </span><span class="s7">+</span><span class="s1"> </span><span class="s10">".-"</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s12">function</span><span class="s1"> copyDetail</span><span class="s7">()</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> total </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s10">'total-price'</span><span class="s7">).</span><span class="s1">innerText</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> deposit </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s10">'deposit-price'</span><span class="s7">).</span><span class="s1">innerText</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> style </span><span class="s7">=</span><span class="s1"> currentStyle </span><span class="s7">===</span><span class="s1"> </span><span class="s10">'colored'</span><span class="s1"> </span><span class="s7">?</span><span class="s1"> </span><span class="s10">'งานลงสี'</span><span class="s1"> </span><span class="s7">:</span><span class="s1"> </span><span class="s10">'งานตัดเส้น'</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> type </span><span class="s7">=</span><span class="s1"> rates</span><span class="s7">[</span><span class="s1">currentStyle</span><span class="s7">][</span><span class="s1">currentType</span><span class="s7">].</span><span class="s1">label</span><span class="s7">;</span></p>
-<p class="p9"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s12">let</span><span class="s4"> text </span><span class="s9">=</span><span class="s4"> </span><span class="s1">`🎨 รายละเอียดการจ้างคอมมิชชั่น\n`</span><span class="s9">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>text </span><span class="s7">+=</span><span class="s1"> </span><span class="s10">`ประเภท: </span><span class="s7">${</span><span class="s1">style</span><span class="s7">}</span><span class="s10"> (</span><span class="s7">${</span><span class="s1">type</span><span class="s7">}</span><span class="s10">)\n`</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">if</span><span class="s7">(</span><span class="s1">extraChar </span><span class="s7">&gt;</span><span class="s1"> </span><span class="s17">0</span><span class="s7">)</span><span class="s1"> text </span><span class="s7">+=</span><span class="s1"> </span><span class="s10">`เพิ่มตัวละคร: </span><span class="s7">${</span><span class="s1">extraChar</span><span class="s7">}</span><span class="s10"> ตัว\n`</span><span class="s7">;</span></p>
-<p class="p11"><span class="s13"><span class="Apple-converted-space">            </span></span><span class="s12">if</span><span class="s7">(</span><span class="s13">document</span><span class="s7">.</span><span class="s13">getElementById</span><span class="s7">(</span><span class="s19">'opt-bg'</span><span class="s7">).</span><span class="s13">checked</span><span class="s7">)</span><span class="s13"> text </span><span class="s7">+=</span><span class="s13"> </span><span class="s19">`ออปชั่น: เพิ่มฉากหลัง (เริ่มต้น 200.-)\n`</span><span class="s7">;</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s12">if</span><span class="s9">(</span><span class="s4">document</span><span class="s9">.</span><span class="s4">getElementById</span><span class="s9">(</span><span class="s1">'opt-comm'</span><span class="s9">).</span><span class="s4">checked</span><span class="s9">)</span><span class="s4"> text </span><span class="s9">+=</span><span class="s4"> </span><span class="s1">`ประเภทการใช้งาน: เชิงพาณิชย์ (Commercial x2)\n`</span><span class="s9">;</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">            </span>text </span><span class="s9">+=</span><span class="s4"> </span><span class="s1">`----------------------------\n`</span><span class="s9">;</span></p>
-<p class="p11"><span class="s13"><span class="Apple-converted-space">            </span>text </span><span class="s7">+=</span><span class="s13"> </span><span class="s19">`💰 ยอดรวมทั้งหมด: </span><span class="s7">${</span><span class="s13">total</span><span class="s7">}</span><span class="s19"> THB\n`</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>text </span><span class="s7">+=</span><span class="s1"> </span><span class="s10">`🏦 ยอดมัดจำ (50%): </span><span class="s7">${</span><span class="s1">deposit</span><span class="s7">}</span><span class="s10">\n`</span><span class="s7">;</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">            </span>text </span><span class="s9">+=</span><span class="s4"> </span><span class="s1">`----------------------------\n`</span><span class="s9">;</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">            </span>text </span><span class="s9">+=</span><span class="s4"> </span><span class="s1">`* รับทราบเงื่อนไขและขั้นตอนการทำงานเรียบร้อยแล้ว`</span><span class="s9">;</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> el </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">createElement</span><span class="s7">(</span><span class="s10">'textarea'</span><span class="s7">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>el</span><span class="s7">.</span><span class="s1">value </span><span class="s7">=</span><span class="s1"> text</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>document</span><span class="s7">.</span><span class="s1">body</span><span class="s7">.</span><span class="s1">appendChild</span><span class="s7">(</span><span class="s1">el</span><span class="s7">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>el</span><span class="s7">.</span><span class="s1">select</span><span class="s7">();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>document</span><span class="s7">.</span><span class="s1">execCommand</span><span class="s7">(</span><span class="s10">'copy'</span><span class="s7">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>document</span><span class="s7">.</span><span class="s1">body</span><span class="s7">.</span><span class="s1">removeChild</span><span class="s7">(</span><span class="s1">el</span><span class="s7">);</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> toast </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s10">'toast'</span><span class="s7">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>toast</span><span class="s7">.</span><span class="s1">style</span><span class="s7">.</span><span class="s1">opacity </span><span class="s7">=</span><span class="s1"> </span><span class="s10">'1'</span><span class="s7">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>setTimeout</span><span class="s7">(()</span><span class="s1"> </span><span class="s7">=&gt;</span><span class="s1"> toast</span><span class="s7">.</span><span class="s1">style</span><span class="s7">.</span><span class="s1">opacity </span><span class="s7">=</span><span class="s1"> </span><span class="s10">'0'</span><span class="s7">,</span><span class="s1"> </span><span class="s17">2000</span><span class="s7">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p9"><span class="s16"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>window</span><span class="s7">.</span><span class="s1">onload </span><span class="s7">=</span><span class="s1"> calculate</span><span class="s7">;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">body</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">html</span><span class="s3">&gt;</span></p>
+<body class="pb-20">
+
+    <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div>
+                <h1 class="text-2xl font-medium tracking-tight">Commission Calculator</h1>
+                <p class="text-[12px] text-gray-400 uppercase tracking-widest mt-1">Update: 26/04/2025</p>
+            </div>
+            <div class="hidden md:block">
+                <span class="text-xs text-gray-400">สำหรับคำนวณราคาคอมมิชชั่นเบื้องต้น</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 mt-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            
+            <div class="lg:col-span-7 space-y-10">
+                
+                <!-- ประเภทงาน -->
+                <section class="bg-white p-8 rounded-[2rem] card-shadow border border-gray-50">
+                    <div class="flex items-center justify-between mb-8">
+                        <h2 class="text-lg font-medium">ประเภทงาน:</h2>
+                        <div class="flex p-1 bg-gray-100 rounded-full text-xs">
+                            <button onclick="setStyle('colored')" id="btn-colored" class="px-5 py-2 rounded-full transition-all bg-white shadow-sm font-medium" style="color: #7BAABD;">งานลงสี</button>
+                            <button onclick="setStyle('lineart')" id="btn-lineart" class="px-5 py-2 rounded-full transition-all text-gray-500">เฉพาะตัดเส้น</button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="base-cards">
+                        <div id="card-headshot" onclick="selectType('headshot')" class="cursor-pointer p-6 rounded-3xl border-2 border-gray-100 bg-gray-50 hover:border-gray-200 transition-all active-card">
+                            <p class="text-sm font-medium">Bust-Up</p>
+                            <p class="sub-text mb-4">หัว - อก</p>
+                            <p class="text-xl font-medium" id="price-headshot">300.-</p>
+                        </div>
+                        <div id="card-halfbody" onclick="selectType('halfbody')" class="cursor-pointer p-6 rounded-3xl border-2 border-gray-100 bg-gray-50 hover:border-gray-200 transition-all">
+                            <p class="text-sm font-medium">Half Body</p>
+                            <p class="sub-text mb-4">ครึ่งตัว</p>
+                            <p class="text-xl font-medium" id="price-halfbody">400.-</p>
+                        </div>
+                        <div id="card-fullbody" onclick="selectType('fullbody')" class="cursor-pointer p-6 rounded-3xl border-2 border-gray-100 bg-gray-50 hover:border-gray-200 transition-all">
+                            <p class="text-sm font-medium">Full Body</p>
+                            <p class="sub-text mb-4">เต็มตัว</p>
+                            <p class="text-xl font-medium" id="price-fullbody">500.-</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ออฟฟิศชั่นเสริม -->
+                <section class="bg-white p-8 rounded-[2rem] card-shadow border border-gray-50">
+                    <h2 class="text-lg font-medium mb-6">ออฟฟิศชั่นเสริม:</h2>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-5 bg-gray-50 rounded-3xl border border-gray-100">
+                            <div>
+                                <p class="text-sm font-medium">เพิ่มตัวละคร</p>
+                                <p class="sub-text" id="add-char-rate">ราคาต่อตัว: 200.-</p>
+                            </div>
+                            <div class="flex items-center gap-5">
+                                <button onclick="changeChar(-1)" class="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-gray-100">-</button>
+                                <span id="char-count" class="font-medium w-4 text-center">0</span>
+                                <button onclick="changeChar(1)" class="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-gray-100">+</button>
+                            </div>
+                        </div>
+
+                        <label class="flex items-center justify-between p-5 bg-gray-50 rounded-3xl border border-gray-100 cursor-pointer hover:bg-white transition-all">
+                            <div class="flex items-center gap-4">
+                                <input type="checkbox" id="opt-bg" onchange="calculate()" class="w-5 h-5 rounded accent-[#B1D5E3]">
+                                <div>
+                                    <p class="text-sm font-medium">เพิ่มฉากหลัง (Add BG)</p>
+                                    <p class="sub-text">ราคาจริงประเมินตามบรีฟ</p>
+                                </div>
+                            </div>
+                            <span class="text-xs font-medium">เริ่มต้น 200.-</span>
+                        </label>
+
+                        <label class="flex items-center justify-between p-5 bg-gray-50 rounded-3xl border border-gray-100 cursor-pointer hover:bg-white transition-all">
+                            <div class="flex items-center gap-4">
+                                <input type="checkbox" id="opt-comm" onchange="calculate()" class="w-5 h-5 rounded accent-[#B1D5E3]">
+                                <div>
+                                    <p class="text-sm font-medium">เชิงพาณิชย์ (Commercial)</p>
+                                    <p class="sub-text">เรทราคา x2 ของยอดรวมทั้งหมด</p>
+                                </div>
+                            </div>
+                            <span class="text-xs font-medium opacity-70">x2</span>
+                        </label>
+                    </div>
+                </section>
+
+                <section class="grid grid-cols-1 md:grid-cols-2 gap-6 text-[14px] leading-relaxed">
+                    <!-- ข้อตกลงในการจ้าง -->
+                    <div class="bg-white p-8 rounded-[2rem] card-shadow border border-gray-50">
+                        <h3 class="font-medium text-lg mb-4">ข้อตกลงในการจ้าง:</h3>
+                        <ul class="space-y-4 text-gray-500">
+                            <li class="flex gap-3 items-start">
+                                <div class="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 check-circle">
+                                    <i class="fa-solid fa-check text-[10px]"></i>
+                                </div>
+                                <span>งานไม่เร่ง (จ.-ศ. ทำงานประจำ)</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <div class="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 check-circle">
+                                    <i class="fa-solid fa-check text-[10px]"></i>
+                                </div>
+                                <span>แก้ฟรี 3 ครั้ง (เกินคิดครั้งละ 50.-)</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <div class="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 check-circle">
+                                    <i class="fa-solid fa-check text-[10px]"></i>
+                                </div>
+                                <span>มัดจำ 50% ก่อนเริ่มงาน</span>
+                            </li>
+                            <li class="flex gap-3 items-start text-red-800">
+                                <div class="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 check-circle" style="background-color: #fee2e2; color: #ef4444;">
+                                    <i class="fa-solid fa-triangle-exclamation text-[10px]"></i>
+                                </div>
+                                <span>ยกเลิกกลางคัน จ่าย 50% ของราคาเต็ม</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- ขั้นตอนการทำงาน -->
+                    <div class="bg-white p-8 rounded-[2rem] card-shadow border border-gray-50">
+                        <h3 class="font-medium text-lg mb-4">ขั้นตอนการทำงาน:</h3>
+                        <ol class="space-y-4 text-gray-500">
+                            <li class="flex gap-3 items-start">
+                                <span class="font-medium text-[#7BAABD]">1)</span>
+                                <span>พูดคุยรับบรีฟ และจ่ายมัดจำครึ่งราคา</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="font-medium text-[#7BAABD]">2)</span>
+                                <span>ส่งสเก็ตช์ (ปรับแก้ได้ก่อนลงสี)</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="font-medium text-[#7BAABD]">3)</span>
+                                <span>ตัดเส้นลงสี และส่งอัปเดตเรื่อยๆ</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="font-medium text-[#7BAABD]">4)</span>
+                                <span>ส่งงานไฟล์จริง และจ่ายส่วนที่เหลือ</span>
+                            </li>
+                        </ol>
+                    </div>
+                </section>
+            </div>
+
+            <!-- สรุปรายการ -->
+            <div class="lg:col-span-5">
+                <div class="sticky top-28 bg-white p-8 md:p-10 rounded-[2.5rem] card-shadow border border-gray-100">
+                    <h3 class="text-xl font-medium mb-10">สรุปรายการ</h3>
+                    
+                    <div id="summary-list" class="space-y-4 text-[13px]"></div>
+
+                    <div class="dashed-line"></div>
+
+                    <div class="flex justify-between items-baseline mt-4 mb-8">
+                        <span class="text-[13px] text-gray-400 font-normal">ราคาสุทธิ</span>
+                        <div class="text-right">
+                            <span id="total-price" class="text-5xl font-medium tracking-tighter" style="color: #7BAABD;">300</span>
+                            <span class="text-[12px] font-bold text-gray-300 ml-1">THB</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 p-5 rounded-2xl flex justify-between items-center" style="background-color: #f3f9fb;">
+                        <span class="text-xs font-medium" style="color: #7BAABD;">ยอดมัดจำ (50%)</span>
+                        <span id="deposit-price" class="text-lg font-medium" style="color: #7BAABD;">150.-</span>
+                    </div>
+
+                    <button onclick="copyDetail()" class="w-full mt-10 merlot-bg text-gray-700 py-5 rounded-2xl font-medium hover:opacity-90 active:scale-[0.98] transition-all flex items-center justify-center gap-3">
+                        <i class="fa-regular fa-copy text-sm"></i> คัดลอกรายละเอียด
+                    </button>
+                    
+                    <div id="toast" class="text-center mt-4 text-[12px] text-green-600 opacity-0 transition-opacity">
+                        คัดลอกข้อมูลเรียบร้อยแล้ว! ✨
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        const rates = {
+            colored: {
+                headshot: { base: 300, add: 200, label: 'Bust-Up (หัว-อก)' },
+                halfbody: { base: 400, add: 300, label: 'Half Body (ครึ่งตัว)' },
+                fullbody: { base: 500, add: 400, label: 'Full Body (เต็มตัว)' }
+            },
+            lineart: {
+                headshot: { base: 150, add: 100, label: 'Bust-Up (หัว-อก)' },
+                halfbody: { base: 200, add: 150, label: 'Half Body (ครึ่งตัว)' },
+                fullbody: { base: 300, add: 200, label: 'Full Body (เต็มตัว)' }
+            }
+        };
+
+        let currentStyle = 'colored';
+        let currentType = 'headshot';
+        let extraChar = 0;
+
+        function setStyle(style) {
+            currentStyle = style;
+            const btnColored = document.getElementById('btn-colored');
+            const btnLineart = document.getElementById('btn-lineart');
+
+            if(style === 'colored') {
+                btnColored.className = "px-5 py-2 rounded-full transition-all bg-white shadow-sm font-medium";
+                btnColored.style.color = "#7BAABD";
+                btnLineart.className = "px-5 py-2 rounded-full transition-all text-gray-500";
+                btnLineart.style.color = "";
+            } else {
+                btnLineart.className = "px-5 py-2 rounded-full transition-all bg-white shadow-sm font-medium";
+                btnLineart.style.color = "#7BAABD";
+                btnColored.className = "px-5 py-2 rounded-full transition-all text-gray-500";
+                btnColored.style.color = "";
+            }
+            updateUI();
+            calculate();
+        }
+
+        function selectType(type) {
+            currentType = type;
+            document.querySelectorAll('#base-cards > div').forEach(c => c.classList.remove('active-card'));
+            document.getElementById(`card-${type}`).classList.add('active-card');
+            updateUI();
+            calculate();
+        }
+
+        function updateUI() {
+            const r = rates[currentStyle];
+            document.getElementById('price-headshot').innerText = r.headshot.base + ".-";
+            document.getElementById('price-halfbody').innerText = r.halfbody.base + ".-";
+            document.getElementById('price-fullbody').innerText = r.fullbody.base + ".-";
+            document.getElementById('add-char-rate').innerText = `ราคาต่อตัว: ${r[currentType].add}.-`;
+        }
+
+        function changeChar(val) {
+            extraChar = Math.max(0, extraChar + val);
+            document.getElementById('char-count').innerText = extraChar;
+            calculate();
+        }
+
+        function calculate() {
+            const r = rates[currentStyle][currentType];
+            let base = r.base;
+            let charPrice = extraChar * r.add;
+            let bgPrice = document.getElementById('opt-bg').checked ? 200 : 0;
+            
+            let total = base + charPrice + bgPrice;
+            let commercialAdd = 0;
+
+            let html = `
+                <div class="flex justify-between">
+                    <span>${currentStyle === 'colored' ? 'งานลงสี' : 'งานตัดเส้น'}: ${r.label}</span>
+                    <span class="font-medium">${base.toLocaleString()}.-</span>
+                </div>
+            `;
+
+            if(extraChar > 0) {
+                html += `
+                    <div class="flex justify-between text-gray-400">
+                        <span>เพิ่มตัวละคร (${extraChar} ตัว)</span>
+                        <span>+${charPrice.toLocaleString()}.-</span>
+                    </div>
+                `;
+            }
+
+            if(bgPrice > 0) {
+                html += `
+                    <div class="flex justify-between text-gray-400">
+                        <span>เพิ่มฉากหลัง (เริ่มต้น)</span>
+                        <span>+${bgPrice.toLocaleString()}.-</span>
+                    </div>
+                `;
+            }
+
+            if(document.getElementById('opt-comm').checked) {
+                commercialAdd = total;
+                total *= 2;
+                html += `
+                    <div class="flex justify-between font-medium pt-2" style="color: #7BAABD;">
+                        <span>เรทเชิงพาณิชย์ (x2)</span>
+                        <span>+${commercialAdd.toLocaleString()}.-</span>
+                    </div>
+                `;
+            }
+
+            document.getElementById('summary-list').innerHTML = html;
+            document.getElementById('total-price').innerText = total.toLocaleString();
+            document.getElementById('deposit-price').innerText = (total / 2).toLocaleString() + ".-";
+        }
+
+        function copyDetail() {
+            const total = document.getElementById('total-price').innerText;
+            const deposit = document.getElementById('deposit-price').innerText;
+            const style = currentStyle === 'colored' ? 'งานลงสี' : 'งานตัดเส้น';
+            const type = rates[currentStyle][currentType].label;
+            
+            let text = `🎨 รายละเอียดการจ้างคอมมิชชั่น\n`;
+            text += `ประเภท: ${style} (${type})\n`;
+            if(extraChar > 0) text += `เพิ่มตัวละคร: ${extraChar} ตัว\n`;
+            if(document.getElementById('opt-bg').checked) text += `ออปชั่น: เพิ่มฉากหลัง (เริ่มต้น 200.-)\n`;
+            if(document.getElementById('opt-comm').checked) text += `ประเภทการใช้งาน: เชิงพาณิชย์ (Commercial x2)\n`;
+            text += `----------------------------\n`;
+            text += `💰 ยอดรวมทั้งหมด: ${total} THB\n`;
+            text += `🏦 ยอดมัดจำ (50%): ${deposit}\n`;
+            text += `----------------------------\n`;
+            text += `* รับทราบเงื่อนไขและขั้นตอนการทำงานเรียบร้อยแล้ว`;
+
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+
+            const toast = document.getElementById('toast');
+            toast.style.opacity = '1';
+            setTimeout(() => toast.style.opacity = '0', 2000);
+        }
+
+        window.onload = calculate;
+    </script>
 </body>
 </html>
