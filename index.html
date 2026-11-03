@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gnihknim / commission calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-mono: 'JetBrains Mono', monospace;
+      --bg-page: #FAF7F2;
+      --bg-card: #FFFFFF;
+      --bg-subcard: #F9F8F3;
+      --border-card: #EFECE6;
+      --accent-color: #B2E3E8;
+      --accent-text: #1C1C1C;
+      --text-main: #1C1C1C;
+      --text-muted: #7A7A7A;
+      --btn-counter-bg: #D4F0F3;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    body.theme-lineart {
+      --bg-page: #D6D6D6;
+      --bg-card: #ECECEC;
+      --bg-subcard: #E4E4E4;
+      --border-card: #D0D0D0;
+      --accent-color: #4A4A4A;
+      --accent-text: #FFFFFF;
+      --text-main: #111111;
+      --text-muted: #666666;
+      --btn-counter-bg: #CCCCCC;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-mono);
+      transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .calculator-container {
+      width: 100%;
+      max-width: 920px;
+    }
+
+    .header-brand {
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 24px;
+      align-items: start;
+    }
+
+    @media (max-width: 820px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .options-section {
+      background: var(--bg-card);
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .style-switch {
+      background: #EAE8E3;
+      padding: 3px;
+      border-radius: 20px;
+      display: flex;
+    }
+
+    body.theme-lineart .style-switch {
+      background: #C4C4C4;
+    }
+
+    .switch-btn {
+      border: none;
+      background: transparent;
+      padding: 6px 16px;
+      border-radius: 16px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      color: #666;
+      font-weight: 500;
+    }
+
+    .switch-btn.active {
+      background: var(--accent-color);
+      color: var(--accent-text);
+      font-weight: 600;
+    }
+
+    .art-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .art-card {
+      border: 1.5px solid var(--border-card);
+      background: var(--bg-subcard);
+      border-radius: 14px;
+      padding: 16px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 110px;
+    }
+
+    .art-card.active {
+      background: var(--accent-color);
+      border-color: var(--accent-color);
+      color: var(--accent-text);
+    }
+
+    .art-name { font-weight: 600; font-size: 0.95rem; }
+    .art-sub { font-size: 0.75rem; opacity: 0.75; }
+    .art-price { font-weight: 700; font-size: 1.1rem; margin-top: 12px; }
+
+    .char-card {
+      border: 1.5px solid var(--border-card);
+      background: var(--bg-subcard);
+      border-radius: 14px;
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .char-title { font-size: 0.9rem; font-weight: 600; }
+    .char-sub { font-size: 0.75rem; color: var(--text-muted); }
+
+    .counter-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .btn-counter {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: none;
+      background: var(--btn-counter-bg);
+      color: var(--text-main);
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+    .count-number {
+      font-weight: 700;
+      font-size: 1rem;
+      min-width: 16px;
+      text-align: center;
+    }
+
+    .addon-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .addon-card {
+      border: 1.5px solid var(--border-card);
+      background: var(--bg-subcard);
+      border-radius: 14px;
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .addon-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .custom-checkbox {
+      width: 20px;
+      height: 20px;
+      accent-color: var(--accent-color);
+      cursor: pointer;
+    }
+
+    .addon-name { font-size: 0.9rem; font-weight: 600; }
+    .addon-sub { font-size: 0.75rem; color: var(--text-muted); }
+    .starting-text { font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; }
+    .price-text { font-weight: 700; font-size: 0.95rem; }
+
+    .receipt-panel {
+      background: #FFFFFF;
+      padding: 28px 24px 36px 24px;
+      position: relative;
+      box-shadow: var(--shadow);
+    }
+
+    .summary-title { font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; }
+
+    .summary-items {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+    }
+
+    .commercial-flag {
+      font-size: 0.8rem;
+      margin-top: 12px;
+      color: #555;
+    }
+
+    .dashed-line {
+      border: none;
+      border-top: 1.5px dashed #CCC;
+      margin: 16px 0;
+    }
+
+    .total-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 16px;
+    }
+
+    .total-amount { font-size: 1.5rem; font-weight: 700; }
+    .thb-text { font-size: 0.75rem; margin-left: 4px; }
+
+    .deposit-box {
+      background: var(--accent-color);
+      color: var(--accent-text);
+      padding: 10px 14px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .btn-copy {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: var(--accent-color);
+      color: var(--accent-text);
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+
+    .zigzag {
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      width: 100%;
+      height: 12px;
+      background: linear-gradient(-45deg, transparent 8px, #FFFFFF 0), linear-gradient(45deg, transparent 8px, #FFFFFF 0);
+      background-repeat: repeat-x;
+      background-size: 16px 16px;
+    }
+  </style>
+</head>
+<body class="theme-colored">
+
+  <div class="calculator-container">
+    <header class="header-brand">
+      <span>gnihknim / commission calculator</span>
+    </header>
+
+    <div class="main-grid">
+      <main>
+        <!-- Artwork Type -->
+        <section class="options-section">
+          <div class="section-head">
+            <h2 class="section-title">Artwork Type:</h2>
+            <div class="style-switch">
+              <button type="button" class="switch-btn active" id="btn-colored" onclick="setStyle('colored')">Colored</button>
+              <button type="button" class="switch-btn" id="btn-lineart" onclick="setStyle('lineart')">Lineart</button>
+            </div>
+          </div>
+
+          <div class="art-grid">
+            <div class="art-card active" id="card-half" onclick="setArtType('half')">
+              <div>
+                <div class="art-name">Half Body</div>
+                <div class="art-sub">(Waist-Up)</div>
+              </div>
+              <div class="art-price" id="price-half">THB 400</div>
+            </div>
+
+            <div class="art-card" id="card-full" onclick="setArtType('full')">
+              <div>
+                <div class="art-name">Full Body</div>
+                <div class="art-sub">(Full Length)</div>
+              </div>
+              <div class="art-price" id="price-full">THB 500</div>
+            </div>
+          </div>
+
+          <!-- Add Character -->
+          <div class="char-card">
+            <div>
+              <div class="char-title">Add Character</div>
+              <div class="char-sub">price per character: <strong id="char-price-text">300 THB</strong></div>
+            </div>
+            <div class="counter-controls">
+              <button type="button" class="btn-counter" onclick="changeCharCount(-1)">-</button>
+              <span class="count-number" id="char-count">1</span>
+              <button type="button" class="btn-counter" onclick="changeCharCount(1)">+</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Add-ons -->
+        <section class="options-section">
+          <h2 class="section-title" style="margin-bottom: 16px;">Add-ons:</h2>
+          <div class="addon-list">
+            <label class="addon-card">
+              <div class="addon-left">
+                <input type="checkbox" id="chk-bg" onchange="calculate()" class="custom-checkbox" checked>
+                <div>
+                  <div class="addon-name">Add Background</div>
+                  <div class="addon-sub">Final price based on brief details</div>
+                </div>
+              </div>
+              <div style="text-align: right;">
+                <div class="starting-text">Starting from</div>
+                <div class="price-text">THB 200</div>
+              </div>
+            </label>
+
+            <label class="addon-card">
+              <div class="addon-left">
+                <input type="checkbox" id="chk-commercial" onchange="calculate()" class="custom-checkbox">
+                <div>
+                  <div class="addon-name">Commercial Use</div>
+                  <div class="addon-sub">2x rate of the total amount</div>
+                </div>
+              </div>
+              <div class="price-text">x2</div>
+            </label>
+          </div>
+        </section>
+      </main>
+
+      <!-- Summary Receipt -->
+      <aside class="receipt-panel">
+        <h2 class="summary-title">Summary</h2>
+        <div class="summary-items" id="summary-items"></div>
+
+        <div class="commercial-flag" id="commercial-badge" style="display: none;">Commercial Rate (x2)</div>
+        <hr class="dashed-line">
+
+        <div class="total-container">
+          <span style="font-size: 0.85rem; font-weight: 600;">Total</span>
+          <div>
+            <span class="total-amount" id="total-val">1,800</span>
+            <span class="thb-text">THB</span>
+          </div>
+        </div>
+
+        <div class="deposit-box">
+          <span>Deposit (50%)</span>
+          <span id="deposit-val">900.-</span>
+        </div>
+
+        <button type="button" class="btn-copy" onclick="copyDetails()">📋 Copy Details</button>
+        <div class="zigzag"></div>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    const PRICING = {
+      colored: {
+        half: { base: 400, charExtra: 300 },
+        full: { base: 500, charExtra: 400 }
+      },
+      lineart: {
+        half: { base: 200, charExtra: 150 },
+        full: { base: 300, charExtra: 200 }
+      },
+      bg: 200
+    };
+
+    let currentStyle = 'colored';
+    let currentArtType = 'half';
+    let charCount = 1;
+
+    function setStyle(style) {
+      currentStyle = style;
+      document.body.className = style === 'colored' ? 'theme-colored' : 'theme-lineart';
+      document.getElementById('btn-colored').classList.toggle('active', style === 'colored');
+      document.getElementById('btn-lineart').classList.toggle('active', style === 'lineart');
+      updateDisplayUI();
+      calculate();
+    }
+
+    function setArtType(type) {
+      currentArtType = type;
+      document.getElementById('card-half').classList.toggle('active', type === 'half');
+      document.getElementById('card-full').classList.toggle('active', type === 'full');
+      updateDisplayUI();
+      calculate();
+    }
+
+    function changeCharCount(delta) {
+      charCount += delta;
+      if (charCount < 0) charCount = 0;
+      document.getElementById('char-count').innerText = charCount;
+      calculate();
+    }
+
+    function updateDisplayUI() {
+      const styleData = PRICING[currentStyle];
+      document.getElementById('price-half').innerText = `THB ${styleData.half.base}`;
+      document.getElementById('price-full').innerText = `THB ${styleData.full.base}`;
+      
+      const currentCharExtraPrice = styleData[currentArtType].charExtra;
+      document.getElementById('char-price-text').innerText = `${currentCharExtraPrice} THB`;
+    }
+
+    function calculate() {
+      const currentConfig = PRICING[currentStyle][currentArtType];
+      const container = document.getElementById('summary-items');
+      container.innerHTML = '';
+
+      let basePrice = currentConfig.base;
+      let charExtraPrice = currentConfig.charExtra;
+
+      let artName = currentArtType === 'half' ? 'Half Body' : 'Full Body';
+      let styleName = currentStyle === 'colored' ? 'Colored' : 'Lineart';
+      let subtotal = basePrice;
+
+      appendSummaryItem(`${styleName}: ${artName}`, `${basePrice}.-`);
+
+      if (charCount > 0) {
+        let charCost = charCount * charExtraPrice;
+        appendSummaryItem(`Add Character x${charCount}`, `${charCost}.-`);
+        subtotal += charCost;
+      }
+
+      if (document.getElementById('chk-bg').checked) {
+        appendSummaryItem('Add BG (Starting)', `${PRICING.bg}.-`);
+        subtotal += PRICING.bg;
+      }
+
+      const isCommercial = document.getElementById('chk-commercial').checked;
+      document.getElementById('commercial-badge').style.display = isCommercial ? 'block' : 'none';
+
+      let total = isCommercial ? subtotal * 2 : subtotal;
+      let deposit = total * 0.5;
+
+      document.getElementById('total-val').innerText = total.toLocaleString();
+      document.getElementById('deposit-val').innerText = `${deposit.toLocaleString()}.-`;
+    }
+
+    function appendSummaryItem(label, priceText) {
+      const div = document.createElement('div');
+      div.className = 'summary-row';
+      div.innerHTML = `<span>${label}</span><span style="font-weight: 600;">${priceText}</span>`;
+      document.getElementById('summary-items').appendChild(div);
+    }
+
+    function copyDetails() {
+      const total = document.getElementById('total-val').innerText;
+      const deposit = document.getElementById('deposit-val').innerText;
+      let text = '--- Summary ---\n';
+      document.querySelectorAll('.summary-row').forEach(row => {
+        text += `${row.children[0].innerText}: ${row.children[1].innerText}\n`;
+      });
+      if (document.getElementById('chk-commercial').checked) text += 'Commercial Rate (x2)\n';
+      text += `Total: ${total} THB\nDeposit (50%): ${deposit}`;
+      navigator.clipboard.writeText(text).then(() => alert('คัดลอกรายละเอียดเรียบร้อยครับ!'));
+    }
+
+    updateDisplayUI();
+    calculate();
+  </script>
+</body>
+</html>
